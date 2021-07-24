@@ -8,6 +8,8 @@ public class AccentBankApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(AccentBankApplication.class, args);
+		
+	
 	}
 
 }
