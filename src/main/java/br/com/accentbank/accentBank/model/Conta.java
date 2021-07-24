@@ -1,5 +1,6 @@
 package br.com.accentbank.accentBank.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,12 +19,12 @@ import lombok.NoArgsConstructor;
 public class Conta {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id_conta")
 	private Long id;
 	private String numero;
-//	@OneToOne
-//	private Cliente cliente;
-//	@ManyToOne
-//	private Agencia agencia;
+	
+	@ManyToOne
+	private Agencia agencia;
 	private double saldoAtual;
 	
 }
