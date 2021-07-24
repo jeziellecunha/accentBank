@@ -1,5 +1,12 @@
 package br.com.accentbank.accentBank.repository;
 
-public interface ClienteRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import br.com.accentbank.accentBank.model.Cliente;
+
+
+@Repository
+public interface ClienteRepository extends JpaRepository<Cliente, Long> {
 
 }
